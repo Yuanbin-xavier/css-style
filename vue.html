@@ -1,0 +1,89 @@
+<style scoped>
+  .account-wrapper {
+    height: calc(100% - 120px);
+  }
+
+  .wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: calc(100% - 90px);
+    height: 100px;
+    border: 3px solid #c1c1c1;
+  }
+
+  input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10000;
+  }
+
+  .bg-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bg, .content {
+    display: inline-block;
+    height: 100%;
+    width: 16.6666666%;
+  }
+
+  .content {
+    font-size: 20px;
+    text-align: center;
+    padding: 37px 0;
+  }
+
+  .bg {
+    border-right: 3px solid #c1c1c1;
+  }
+
+  .bg:last-child {
+    border-right: none;
+  }
+</style>
+
+<template>
+  <div class="account-wrapper">
+    <div class="wrapper">
+      <input type="password" v-model="message" maxlength="6">
+      <span class="content" v-for="n in password">●</span>
+      <div class="bg-wrapper">
+        <span class="bg" v-for="n in 6"></span>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script type="text/babel">
+  export default {
+    data(){
+      return {
+        message: ''
+      }
+    },
+
+    computed: {
+      password(){
+        return this.message.length
+      }
+    },
+
+    watch: {
+      message(value){
+        if (value.length === 6) {
+          alert('支付成功')
+        }
+      }
+    }
+  }
+</script>
