@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>rgba and hsla</title>
+  <style>
+    ul li {
+      list-style: none;
+    }
+    li.rgba {
+      float: left;
+      width: 50px;
+      height: 50px;
+    }
+    li.rgba1 {
+      background: rgba(255,255,0,1);
+    }
+    li.rgba2 {
+      background: rgba(255,255,0,0.8);
+    }
+    li.rgba3 {
+      background: rgba(255,255,0,0.6);
+    }
+    li.rgba4 {
+      background: rgba(255,255,0,0.4);
+    }
+    li.rgba5 {
+      background: rgba(255,255,0,0.2);
+    }
+    li.rgba6 {
+      background: rgba(255,255,0,0);
+    }
+
+    .hsla_colors {
+      width: 200px;
+      padding: 30px 20px;
+      border: 2px solid #cccccc;
+      background: url(https://avatars1.githubusercontent.com/u/5771087?v=3&s=460) no-repeat center top;
+      color: white;
+    }
+    .hsla_colors .in{
+      background-color: hsla(240,100%,50%, 0.7);
+    }
+  </style>
+</head>
+<body>
+<div class="example">
+  <p>CSS3的RGBA效果</p>
+  <p>rgba 在我的理解就是用来做透明度</p>
+  <ul>
+   <li class="rgba rgba1">1</li>
+   <li class="rgba rgba2">0.8</li>
+   <li class="rgba rgba3">0.6</li>
+   <li class="rgba rgba4">0.4</li>
+   <li class="rgba rgba5">0.2</li>
+   <li class="rgba rgba6">0</li>
+ </ul>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="hsla_colors">
+  <div class="in">看看这里的背景颜色是什么颜色？</div>
+</div>
+<div>
+  <ul>
+    <li>hsla(240,100%,50%,0.05) </li> /* 5% opaque blue */
+    <li>hsla(240,100%,50%, 0.4) </li> /* 40% opaque blue */
+    <li>hsla(240,100%,50%, 0.7) </li> /* 70% opaque blue */
+    <li>hsla(240,100%,50%,   1) </li> /* full opaque blue */
+  </ul>
+</div>
+</body>
+</html>
