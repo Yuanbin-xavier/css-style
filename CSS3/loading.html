@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loading动画</title>
+<style>
+	.loading {
+		position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  margin: auto;
+	  height: 40px;
+	  width: 70%;
+		width: 100px;
+		background: green;
+	}
+	.loading > span {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: red;
+	  animation: thing 0.7s infinite linear;
+	  animation-fill-mode: both;
+	}
+
+	.loading > span:nth-child(odd) {
+		animation-delay: 0s;
+	}
+	.loading > span:nth-child(even) {
+		animation-delay: 0.35s;
+	}
+
+	@-webkit-keyframes thing {
+	  50% {
+	    -webkit-transform: scale(0.75);
+	    opacity: 0.2;
+	  }
+	  100% {
+	    -webkit-transform: scale(1);
+	    opacity: 1;
+	  }
+	}
+	@keyframes thing {
+	  50% {
+	    transform: scale(0.75);
+	    opacity: 0.2;
+	  }
+	  100% {
+	    transform: scale(1);
+	    opacity: 1;
+	  }
+	}
+</style>
+</head>
+<body>
+	<div class="loading">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+</body>
+</html>
